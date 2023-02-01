@@ -26,14 +26,14 @@ console.log(vowels[0]);
 var value =[20,23,25,22,21,24];
 value[0]=21;
 console.log(value);
-
+                        /* Use of pop and push */
 //6. ["Hila", "Lila", "Mila", "Tila"] in this Array remove 'Mila','Tila' and entery new name 'Bariul' from the Array.
 var nameCollection=["Hila", "Lila", "Mila", "Tila"];
 nameCollection.pop()
 nameCollection.pop()
 nameCollection.push('Bariul');
 console.log(nameCollection);
-
+                         /* Use of shift */
 //7.In javascript Remove first item from an Array and add array element in the beginning
 var friends = ["Anik", "Naim", "Plabon", "Naimur", "Rakib", "Minhaz"];
 friends.shift(); //Remove first item
