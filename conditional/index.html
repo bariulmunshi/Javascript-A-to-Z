@@ -1,0 +1,112 @@
+<!-- Problem: Create JavaScript program which compute the average marks of students. Accept six subject marks of student from user. Calculate average marks of student which is used to determine the corresponding grades.
+Range                      Grade
+
+35 to 60                    F
+
+61 to 70                    D
+
+71 to 80                    C
+
+81 to 90                    B
+
+91 to 100                  A -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Enter Marks</title>
+    <script type="text/javascript">
+      function submit_marks() {
+        var sub1 = parseInt(document.getElementById("s1").value);
+        var sub2 = parseInt(document.getElementById("s2").value);
+        var sub3 = parseInt(document.getElementById("s3").value);
+        var sub4 = parseInt(document.getElementById("s4").value);
+        var sub5 = parseInt(document.getElementById("s5").value);
+        var sub6 = parseInt(document.getElementById("s6").value);
+        var total = sub1 + sub2 + sub3 + sub4 + sub5 + sub6;
+        var per = total / 6;
+        var grade;
+        if (per >= 35 && per <= 60) {
+          grade = "F";
+        } else if (per >= 61 && per <= 70) {
+          grade = "D";
+        } else if (per >= 71 && per <= 80) {
+          grade = "C";
+        } else if (per >= 81 && per <= 90) {
+          grade = "B";
+        } else if (per >= 91 && per <= 100) {
+          grade = "A";
+        } else {
+          grade = "Invalid or Failed";
+        }
+        document.getElementById("demo").innerHTML =
+          "Your Total Marks : " +
+          total +
+          "<br>Your Percentage : " +
+          per +
+          "<br>Your Grade : " +
+          grade;
+        // document.write("Your Total Marks : "+total);
+        // document.write("<br>Your Percentage : "+per);
+        // document.write("<br>Your Grade : "+grade);
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Enter Students Marks</h1>
+    <input type="text" id="s1" placeholder="Enter English Marks" /><br />
+    <input type="text" id="s2" placeholder="Enter IT Marks" /><br />
+    <input type="text" id="s3" placeholder="Enter OCM Marks" /><br />
+    <input type="text" id="s4" placeholder="Enter Economics Marks" /><br />
+    <input type="text" id="s5" placeholder="Enter Maths Marks" /><br />
+    <input type="text" id="s6" placeholder="Enter Account Marks" /><br />
+
+    <input type="submit" onclick="submit_marks()" />
+
+    <div id="demo"></div>
+  </body>
+</html>
+
+<!-- প্রাকটিস চ্যালেঞ্জ -১:  
+
+ক্লাস সেভের এর ফাইনাল এক্সাম এ তুমি ফার্স্ট হয়েছ। তোমার বন্ধু আলিয়া, ডালিয়া, সালিয়া, মালিয়া, লিলিয়া আর জ্বালাইয়া - তাদের grade তুমি জানো না। তবে তাদের নম্বর জানো. আলিয়া 95 পেয়েছে, ডালিয়া 66 পেয়েছে, সালিয়া 80 পেয়েছে, মালিয়া পেয়েছে 59, লিলিয়া পেয়েছে 47, জ্বালাইয়া পেয়েছে 77। তুমি JS code দিয়ে তাদের grade বের করে দিতে পারবে?
+
+১) যারা ৫০ এর নিচে পেয়েছে, তাদের grade F.
+
+২) যারা ৫০ বা তার উপরে পেয়েছে, অথবা ৬০ এর নিচে পেয়েছে, তাদের grade D.
+
+৩) যারা ৬০ বা তার উপরে পেয়েছে, অথবা ৭০ এর নিচে পেয়েছে, তাদের grade C.
+
+৪) যারা ৭০ বা তার উপরে পেয়েছে, অথবা ৮০ এর নিচে পেয়েছে, তাদের grade B.
+
+৫) যারা ৮০ বা তার উপরে পেয়েছে, অথবা ৯০ এর নিচে পেয়েছে, তাদের grade A.
+
+৬) যারা ৯০ বা তার উপরে পেয়েছে, তাদের grade A+. -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      var marks = prompt("Enter your marks: ");
+      if (marks < 50) {
+        console.log("Grade F");
+      } else if (marks >= 50 && marks < 60) {
+        console.log("Grade D");
+      } else if (marks >= 60 && marks < 70) {
+        console.log("Grade C");
+      } else if (marks >= 70 && marks < 80) {
+        console.log("Grade B");
+      } else if (marks >= 80 && marks < 90) {
+        console.log("Grade A");
+      } else {
+        console.log("Grade A+");
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Test</h1>
+  </body>
+</html> -->

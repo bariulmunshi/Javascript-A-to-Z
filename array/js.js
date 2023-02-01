@@ -49,3 +49,4 @@ friends.shift();
 var friends = ["Anik", "Naim", "Plabon", "Naimur", "Rakib", "Minhaz"];
 friends.unshift("Numan");
 // console.log(friends);
+
