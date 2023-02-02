@@ -1,5 +1,4 @@
-// 19-7 (optional) Javascript switch case break and default
-// condition
+// 19-7 (optional) Javascript switch case break and default  condition
 var colors = "yellow";
 if (colors == " red") {
   console.log("The color is red");
