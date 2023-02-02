@@ -28,7 +28,7 @@ var permissionBuyCar=true;
 if(carPrice<myBudget || permissionBuyCar==true){
       console.log("I will buy the car");
 }
-// use of if else(Multi-condition)
+// use of if else(single-condition)
 if (carPrice<myBudget){
   console.log("I will buy the car");
 }
