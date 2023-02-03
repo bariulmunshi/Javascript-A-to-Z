@@ -8,11 +8,9 @@ console.log("Let's play video Game");
 console.log("Let's go to the market ");
 startFan();
 startFan();
-
 // Now inch to feet conversations by function call
 function inchesToFeet(inches) {
   var feet = inches / 12;
-
   return feet;
 }
 var mySetInches = 154;
