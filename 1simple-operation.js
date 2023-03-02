@@ -17,9 +17,14 @@ var orangePrice=20;
 var quantity=10;
 var totalCost=orangePrice*quantity;
 console.log(totalCost);
-
 // divison
 var money=400;
 var player=4;
 var eachPlayer=money/player;
 console.log(eachPlayer);
+
+// remainder
+var mangoes =11;
+var person =2;
+console.log(mangoes/person);
+console.log(mangoes%person);
