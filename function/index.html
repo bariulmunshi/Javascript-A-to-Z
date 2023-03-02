@@ -15,6 +15,21 @@ Range                      Grade
 <html>
   <head>
     <title>Enter Marks</title>
+  </head>
+  <body style="text-align: center; color: #f3efef;background: #16310ba8;">
+    <h1>Enter Students Marks</h1>
+    <input type="text" id="s1" placeholder="Enter English Marks" /><br />
+    <input type="text" id="s2" placeholder="Enter IT Marks" /><br />
+    <input type="text" id="s3" placeholder="Enter OCM Marks" /><br />
+    <input type="text" id="s4" placeholder="Enter Economics Marks" /><br />
+    <input type="text" id="s5" placeholder="Enter Maths Marks" /><br />
+    <input type="text" id="s6" placeholder="Enter Account Marks" /><br />
+
+    <input type="submit" onclick="submit_marks()" />
+
+    <div id="demo" style="height: 200px; width: 200px; border: 10px solid red; margin: auto;"></div>
+
+    <!-- ============js code========== -->
     <script type="text/javascript">
       function submit_marks() {
         var sub1 = parseInt(document.getElementById("s1").value);
@@ -51,19 +66,6 @@ Range                      Grade
         // document.write("<br>Your Grade : "+grade);
       }
     </script>
-  </head>
-  <body>
-    <h1>Enter Students Marks</h1>
-    <input type="text" id="s1" placeholder="Enter English Marks" /><br />
-    <input type="text" id="s2" placeholder="Enter IT Marks" /><br />
-    <input type="text" id="s3" placeholder="Enter OCM Marks" /><br />
-    <input type="text" id="s4" placeholder="Enter Economics Marks" /><br />
-    <input type="text" id="s5" placeholder="Enter Maths Marks" /><br />
-    <input type="text" id="s6" placeholder="Enter Account Marks" /><br />
-
-    <input type="submit" onclick="submit_marks()" />
-
-    <div id="demo"></div>
   </body>
 </html>
 
