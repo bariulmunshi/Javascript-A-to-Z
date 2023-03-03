@@ -14,18 +14,18 @@ if (colors == " red") {
   console.log("The color is not set");
 }
 
-// switch syntax:
-// switch(expression){
-//     case a:
-//     //code block
-//     break;
-//     case b:
-//     //code block
-//     break;
-//     Default:
-//     //code block
-//     }
-
+/* switch syntax:
+switch(expression){
+    case a:
+    code block
+    break;
+    case b:
+    code block
+    break;
+    Default:
+    code block
+    }
+ */
 switch ("yellow") {
   case "red":
     console.log("The color is red");

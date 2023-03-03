@@ -1,3 +1,5 @@
+                          //Based on simple operation(introduction)
+
 /* Problem-1: Harry's Mother gave him money and asked him to buy some oranges and apples. Write program to help Harry calculate how much money the shopkeeper will return.
 Input:
 Harry's Mother gave him 1000tk and the cost of orrange & apple is 700. */

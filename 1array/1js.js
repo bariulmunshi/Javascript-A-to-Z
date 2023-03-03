@@ -34,13 +34,18 @@ var friendsage = [23, 22, 20, 20];
 friendsage.push(12);
 // console.log(friendsage);
 
-// remove/pop/insert an element from an array
+// pop an element from an array
 var friendsage = [23, 22, 20, 20];
 friendsage.pop();
 // friendsage.pop();
 // lastItem = friendsage.pop();
 // console.log(friendsage);
 // console.log(lastItem);
+
+// remove and insert element
+var friendsage = [23, 22, 20, 20];
+friendsage[1]=12;
+console.log(friendsage);
 
 // in javascript Remove first item from an Array and add array element in the beginning
 var friends = ["Anik", "Naim", "Plabon", "Naimur", "Rakib", "Minhaz"];
