@@ -8,15 +8,15 @@ var computer = {
   ssd: "available 250gb",
   ssdBrand: "HP",
 };
-// console.log(computer.monitor);
+console.log(computer.monitor); //more convinient
 // or,
-var computerMonitor = computer.monitor;
+var computerMonitor = computer.monitor; 
 // console.log(computerMonitor);
 // set a object property value
-computer.monitor = "samsung";
+computer.monitor = "samsung"; //more convinient
 // or,
-computer["monitor"] = "XIAOMI";
+// computer["monitor"] = "XIAOMI";
 // or,
-var newMonitorUpadatedBrand = "monitor";
-computer[newMonitorUpadatedBrand] = "Asus";
+// var newMonitorUpadatedBrand = "monitor";
+// computer[newMonitorUpadatedBrand] = "Asus";
 console.log(computer);

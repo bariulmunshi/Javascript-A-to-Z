@@ -31,7 +31,7 @@ switch ("yellow") {
     console.log("The color is red");
     break;
   case "green":
-    console.log("The color is green");
+    console.log("The color is green");  
     break;
   case "blue":
     console.log("The color is blue");
