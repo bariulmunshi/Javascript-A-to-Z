@@ -59,4 +59,7 @@ console.log(maxNum); // Output: 79 */
 
 
 
-
+function add(a, b){
+  return a + b;
+}
+console.log(add("adam" + "eve"))

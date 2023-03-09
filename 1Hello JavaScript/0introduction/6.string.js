@@ -74,7 +74,34 @@ const lines=["How are you doing today?",
 "How are you doing today?",
 "How are you doing today?"];
 const newPara= lines.join(':'); //join
-console.log(newPara);
+// console.log(newPara);
 
 
              // Reverse a string and Reverse words in a sentence
+/* 
+//Reverse a string
+function reverseString(text){
+  let reversed='';
+  for(let i=text.length-1; i>=0;i--){
+    const element=text[i];
+    reversed=reversed+element;
+    console.log(element,reversed);
+  }
+  return reversed;
+}
+const myString= 'I am a good boy';
+const reversed=reverseString(myString);
+console.log('Reversed output string:',reversed); */
+
+// Reverse words in a sentence
+/* function reversedWords(str){
+  const words=str.split(' ');
+  const result=[];
+  for(let i=words.length-1; i>=0; i--){
+    const element=  words[i];
+    result.push(element);
+  }
+  console.log(result);
+}
+const myString= 'I am a good boy';
+reversedWords(myString); */
