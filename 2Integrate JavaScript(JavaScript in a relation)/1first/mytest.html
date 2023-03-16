@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test</title>
+</head>
+<body>
+  <!-- getElementById -->
+  <p id="demo"></p>
+  <!-- getElementByClassName -->
+  <!-- <p class="test-class"></p> -->
+  <div class="example">Element1</div>
+
+  <!-- Dynamic style, getAttribute, setAttribute, innerText, innerHTML -->
+  
+<script>
+  /* getElementById */
+document.getElementById("demo").innerHTML = "Hello World iD";
+document.getElementById("demo").style.color = "red";
+document.getElementById("demo").style.backgroundColor = "green";
+document.getElementById("demo").style.textAlign = "center";
+
+/* getElementsByClassName */
+// document.getElementsByClassName("test-class").innerHTML = "This is Bariul";
+const collection = document.getElementsByClassName("example");
+collection[0].innerHTML = "Hello World! class";
+
+
+/* Dynamic style, getAttribute, setAttribute, innerText, innerHTML */
+
+</script>
+</body>
+</html>

@@ -27,21 +27,21 @@ console.log(friend);
 
 const friends=[23,35,33,34,35];
 //console.log(friends.includes(23)); //inlcudes
-const newFriensAge=[21,32,31];
+/* const newFriensAge=[21,32,31];
 const allfriends=newFriensAge.concat(friends); //concat
-console.log(allfriends);
+console.log(allfriends); */
 
 // another way to check includes
-if(friends.indexOf(213)!==-1){
+/* if(friends.indexOf(213)!==-1){
   console.log('yes')
 }
 else{
   
   console.log('No')
-}
+} */
 
               //Remove duplicate items from an array
-const names=['abul','babul','asif','fokir','abul','babul','monir']
+/* const names=['abul','babul','asif','fokir','abul','babul','monir']
 function remoteDuplicate(names){
   const unique=[];
   for(let i=0; i<names.length;i++){
@@ -53,4 +53,68 @@ function remoteDuplicate(names){
   return unique;
 }
 const uniqueNames=remoteDuplicate(names);
-console.log(uniqueNames);
+console.log(uniqueNames); */
+
+
+// Find the matching product by searching products
+const phones=  [
+  {name:'xiaomi node 7', camera:12,storage:'32gb',price:3600,color:'silver '},
+  {name:'Samsung node 11', camera:12,storage:'32gb',price:3500,color:'silver '},
+  {name:'iphone node 12', camera:12,storage:'32gb',price:3200,color:'silver '},
+  {name:'oppo node 33', camera:12,storage:'32gb',price:3000,color:'silver '},
+  {name:'Nokia node 12', camera:12,storage:'32gb',price:3300,color:'silver '},
+  {name:'HTC node 2', camera:12,storage:'32gb',price:3100,color:'silver '},
+  {name:'Tecno node 1', camera:12,storage:'32gb',price:3900,color:'silver '},
+  {name:'Walton node 9', camera:12,storage:'32gb',price:3700,color:'silver '},
+];
+// for (const phone of phones){
+//   console.log(phone);
+// }
+function matchedProduct(phones,search){
+  const matched=[];
+  for (const phone of phones){
+    console.log(phone.name.includes(search));{
+      matched.push(phone);
+    }
+    return matched;
+  }
+}
+const result5=matchedProduct(phones,'name');
+console.log(result5);
+function compare(a, b) {
+
+  if (a == b) {
+ 
+  return true;
+ 
+  } else {
+ 
+  return false;
+ 
+  }
+ 
+ }
+ 
+ const result2 = compare(15, "15");
+ 
+ console.log(result2);
+ 
+ function compare(a, b) {
+
+  if (a.toString() === b) {
+ 
+  return true;
+ 
+  } else {
+ 
+  return false;
+ 
+  }
+ 
+ }
+ 
+ const result = compare(25, 25);
+ 
+ console.log(result);
+ 
+ 
