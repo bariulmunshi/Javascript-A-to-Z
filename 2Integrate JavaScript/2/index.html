@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dom js events</title>
+</head>
+<body>
+  <!-- What is Event, different types of event in web -->
+  <h1>What is Event, different types of event in web  </h1>
+  <h1 onclick="console.log('I am click')">Dom er ajkae spacial event</h1>
+  <!-- option-1:onclik -->
+  <button onclick="document.body.style.backgroundColor='black'">Make black background</button>
+  <button onclick="console.log(7)">click me</button>
+  <button onclick="console.log(65)">another button</button>
+  <br>
+  <button onclick="makeRed()">make red</button>
+  <br>
+  <button id="make-blue">make yellow</button>
+  <br>  
+  <button id="make-purple">make purple</button>
+  <!-- Different ways to use addEventListener on a button -->
+  <button id="make-pink">make pink</button>
+  <button id="make-green">Make green</button>
+  <button id="make-goldenRod">make GoldenRod</button>
+  <!-- Most common ways to set Event Handlers -->
+  <h1>Final DOM Event Handlers</h1>
+  <h3 id="handlers-status">default text</h3>
+  <p id="input-text-display">By default text</p>
+  <input type="text" name="" id="input-field">
+  <button id="btn-update">update</button>
+  <br>
+  <br>
+<button onclick="handleOnClick()">handle event by add onclick function</button>
+<button id="event-listener">handle event by addEventListener</button>
+<!-- Create a comment box and display comment -->
+<h1>Please add your comment</h1>
+<div id="comment-container">
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde deserunt assumenda voluptate provident, reprehenderit sapiente. Impedit obcaecati eum ipsa explicabo natus laborum neque. Corrupti provident exercitationem nobis placeat non saepe!</p>
+  <p>Fugit sit cum officiis commodi aperiam harum! Corporis hic aperiam soluta illum quia blanditiis vel quo. Pariatur excepturi temporibus, commodi adipisci mollitia nesciunt autem? Odit distinctio nisi modi aliquam cupiditate.</p>
+  <p>Corrupti nostrum assumenda, cum natus dolor fugiat impedit itaque ipsa animi laborum temporibus distinctio voluptatibus dolores asperiores! Eaque, cupiditate blanditiis exercitationem adipisci maxime optio, pariatur aliquam cumque sequi quaerat est.</p>
+</div>
+<div>
+  <textarea name="" id="new-comment" cols="60" rows="5"></textarea>
+  <br>
+  <button id="btn-post">post</button>
+</div>
+  <script src="js/event.js"></script>
+  <script>
+    /* Create a comment box and display comment */
+    //step-1:addEventListener to the post button
+    document.getElementById('btn-post').addEventListener('click',function(){
+      //step-2: get the comment  inside the text area
+    const commentBox=document.getElementById('new-comment');
+    const newComment=commentBox.value;
+    //step-3: set the comment inside the comment container
+    const commentContainer=document.getElementById('comment-container');
+    const p=document.createElement('p');
+    p.innerText=newComment;
+    commentContainer.appendChild(p);
+    //step-4:clear the text area
+    commentBox.value='';
+    })
+  </script>
+</body>
+</html>
