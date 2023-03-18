@@ -5,8 +5,22 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dom js events</title>
+  <style>
+      body{
+        border:5px solid green;
+      }
+      #list-container{
+        border:4px solid red;
+      }
+      .list-container, ul{
+        border:3px solid yellow;
+      }
+      #item-2{
+        border: 2px solid purple;
+      }
+  </style>
 </head>
-<body>
+<body id="body">
   <!-- What is Event, different types of event in web -->
   <h1>What is Event, different types of event in web  </h1>
   <h1 onclick="console.log('I am click')">Dom er ajkae spacial event</h1>
@@ -46,21 +60,58 @@
   <br>
   <button id="btn-post">post</button>
 </div>
+<!-- Simple github like delete confirmation button -->
+<h1>Simple github like delete confirmation button
+</h1>
+<button id="btn-more">Events</button>
+<input id="text-field" type="text">
+<!-- github -->
+<h1 id="secret-info">My secret Info</h1>
+<input id="delete-confirm" type="text" placeholder="Please type delete">
+<button id="btn-delete"  disabled>Delete</button>
+<!-- Event bubble and Stop propagating -->
+<h1>Event bubble and Stop propagating</h1>
+<section id="list-container">
+  <ul id="list-ul">
+    <li id="item-1">Lorem, ipsum.</li>
+    <li id="item-2">Sint, laborum?</li>
+    <li id="item-3">Ullam, repellat.</li>
+    <li id="item-4">Odit, iusto.</li>
+    <li id="item-5">Neque, maxime.</li>
+    <li id="item-6">Unde, quod?</li>
+  </ul>
+</section>
+<!-- Event delegate and benefit of Event bubble -->
+<h1>Event delegate and benefit of Event bubble</h1>
+<section>
+    <ol id="list-container-2">
+      <li class="item">Lorem, ipsum dolor.</li>
+      <li class="item">Nihil, odit distinctio.</li>
+      <li class="item">A, est itaque.</li>
+      <li class="item">Placeat, vero? Repellendus!</li>
+      <li class="item">Beatae, ad ipsum!</li>
+      <li class="item">Culpa, ipsum dolores!</li>
+    </ol>
+    <button id="btn-ad-item">add new item</button>
+</section>
   <script src="js/event.js"></script>
   <script>
-    /* Create a comment box and display comment */
-    //step-1:addEventListener to the post button
-    document.getElementById('btn-post').addEventListener('click',function(){
-      //step-2: get the comment  inside the text area
-    const commentBox=document.getElementById('new-comment');
-    const newComment=commentBox.value;
-    //step-3: set the comment inside the comment container
-    const commentContainer=document.getElementById('comment-container');
-    const p=document.createElement('p');
-    p.innerText=newComment;
-    commentContainer.appendChild(p);
-    //step-4:clear the text area
-    commentBox.value='';
+  /* Event delegate and benefit of Event bubble */
+    const items=document.getElementsByClassName('item');
+    for(const item of items){
+      // console.log(event.target);
+      // console.log(event.target.parentNode);
+      item.addEventListener('click',function(){
+        console.log(item);
+        // event.target.parentNode.removeChild(event.target);
+      })
+    }
+    document.getElementById('btn-ad-item').addEventListener('click',function(){
+      const listContainer=document.getElementById('list-container-2');
+      const li=document.createElement('li');
+      li.innerText='Brand new item added';
+      li.classList.add('item');
+      listContainer.appendChild(li);
     })
   </script>
 </body>
