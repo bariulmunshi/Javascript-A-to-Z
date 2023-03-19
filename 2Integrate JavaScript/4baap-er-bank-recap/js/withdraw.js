@@ -5,7 +5,7 @@ document.getElementById('btn-withdraw').addEventListener('click',function(){
   //output
   const previousWithdrawTotal=getOutputValueById('withdraw-total')
   const newWithdrawTotal=previousWithdrawTotal+newWithdrawAmount;
-  setTextOutputValueByID('withdraw-total',newWithdrawTotal);
+   setTextOutputValueByID('withdraw-total',newWithdrawTotal);
 
   //output for balance
   const previousBalanceTotal=getOutputValueById('balance-total');
