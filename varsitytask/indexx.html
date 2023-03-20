@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+        h1{
+            text-align: center;
+        }
+     
+    </style>
+</head>
+<body>
+    <form action="">
+        <table  align="center">
+            <h1>Registration Form</h1>
+            <!-- usewrname -->
+            <tr>
+<th>Username:</th>
+<td><input type="text" id="name"></td>
+            </tr>
+
+            <!-- email -->
+
+            <tr>
+<th>Email:</th>
+<td><input type="email" id="email"></td>
+            </tr>
+
+            <!-- phone -->
+            <tr>
+                <th>Phone Number:</th>
+                <td><input type="number" id="phone"></td>
+            </tr>
+
+            <!-- password -->
+            <tr>
+                <th>password</th>
+                <td><input type="password" id="pass1"></td>
+            </tr>
+            <tr>
+                <td>Condirm Password:</td>
+                <td><input type="password" id="pass2"></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="submit" onclick="validate()" id="submit"></td>
+            </tr>
+</table>
+<script>
+    function validate(){
+    const name=document.getElementById('name').value;
+    const email=document.getElementById('email').value;
+    const phone=document.getElementById('phone').value;
+    const pass1=document.getElementById('pass1').value;
+    const pass2=document.getElementById('pass2').value;
+    if(name==''){
+        alert('plz enter your name!!');
+    }
+   if(!isNaN(name)){
+    alert('please type character');
+   }
+   var at=email.indexOf('@');
+   var dot=email.lastIndexOf('.');
+   if(at>dot+2>=email.length){
+    alert("inter a valid mail");
+   }
+   if(phone.length!=11){
+    alert("not a valid Number!!");
+   }
+   if(Pass1==''){
+    alert("please enter a password!");
+   }
+   else if(pass1.length!=pass2.length){
+    alert("password did not match!!try again");
+   }
+}
+    </script>
+    </form>
+</body>
+</html>

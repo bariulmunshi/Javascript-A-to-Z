@@ -1,0 +1,52 @@
+<html> 
+ <head> 
+  <title>Javascript</title> 
+   
+ </head> 
+ <body> 
+  <h1 id="first">This is a headline</h1> 
+   
+  <table> 
+   <tr> 
+    <td>First Number</td> 
+    <td><input type="number" id="firstNumber"></td> 
+   </tr> 
+   <tr> 
+    <td>Last Number</td> 
+    <td><input type="number" id="lastNumber"></td> 
+   </tr> 
+   <tr> 
+    <td>Result</td> 
+    <td><input type="text" id="result"></td> 
+   </tr> 
+   <tr> 
+    <td></td> 
+    <td> 
+     <input type="submit" id="plus" value="+"> 
+     <input type="submit" id="minus" value="-"> 
+     <input type="submit" id="multi" value="*"> 
+     <input type="submit" id="div" value="/"> 
+    </td> 
+   </tr> 
+  </table> 
+  <script> 
+   document.write('Hello World<br>'); 
+   document.write('Welcome<br>'); 
+   document.getElementById('first').innerHTML='First Javascript Class'; 
+   //alert('Hi'); 
+    
+   var x=5; 
+   var y = 10; 
+   document.write(x+y); 
+    
+   var plusBtn = document.getElementById('plus'); 
+   plusBtn.onclick= function(){ 
+    var number1 = Number(document.getElementById('firstNumber').value); 
+    var number2 = Number(document.getElementById('lastNumber').value); 
+    var res= number1+number2; 
+    document.getElementById('result').value=res; 
+   }; 
+    
+  </script> 
+ </body> 
+</html>

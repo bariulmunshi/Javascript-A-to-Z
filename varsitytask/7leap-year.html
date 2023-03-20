@@ -1,0 +1,62 @@
+<!-- write html,css ,js code and use click button for check leap year -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Leap Year Checker</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f2f2f2;
+			text-align: center;
+		}
+
+		h1 {
+			color: #333;
+		}
+
+		input {
+			padding: 10px;
+			font-size: 16px;
+			border-radius: 5px;
+			border: none;
+			box-shadow: 1px 1px 5px #333;
+		}
+
+		button {
+			padding: 10px;
+			font-size: 16px;
+			border-radius: 5px;
+			border: none;
+			background-color: #333;
+			color: #fff;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<h1>Leap Year Checker</h1>
+	<label for="year">Enter a year:</label>
+	<input type="number" id="year" placeholder="e.g. 2023" min="0">
+	<br><br>
+	<button onclick="checkLeapYear()">Check</button>
+	<p id="result"></p>
+	<script>
+    function checkLeapYear() {
+  // Get the input element
+  var yearInput = document.getElementById("year");
+
+  // Get the value of the input element
+  var year = parseInt(yearInput.value);
+
+  // Check if the year is a leap year
+  if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+    // Display the result
+    document.getElementById("result").innerHTML = year + " is a leap year!";
+  } else {
+    // Display the result
+    document.getElementById("result").innerHTML = year + " is not a leap year.";
+  }
+}
+  </script>
+</body>
+</html>

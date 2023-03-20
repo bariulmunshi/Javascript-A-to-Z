@@ -1,0 +1,65 @@
+<!-- write  a javascript code for from validation using js and html (note: field should not be blank, password must be 6 to 12  character, and phone number must be  13 digit and email should be @gmail.com)
+ -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>form validation</title>
+ </head>
+ <body>
+  <form id="myForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name"><br><br>
+    <label for="email">Email:</label>
+    <input type="text" id="email" name="email"><br><br>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password"><br><br>
+    <label for="phone">Phone:</label>
+    <input type="text" id="phone" name="phone"><br><br>
+    <button type="submit">Submit</button>
+  </form>
+  <script>
+    const form = document.getElementById('myForm');
+const nameInput = document.getElementById('name');
+const emailInput = document.getElementById('email');
+const passwordInput = document.getElementById('password');
+const phoneInput = document.getElementById('phone');
+
+form.addEventListener('submit', function(event) {
+  event.preventDefault();
+  
+  const nameValue = nameInput.value.trim();
+  const emailValue = emailInput.value.trim();
+  const passwordValue = passwordInput.value.trim();
+  const phoneValue = phoneInput.value.trim();
+
+  if (nameValue === '') {
+    alert('Name field cannot be blank');
+    return;
+  }
+  
+  if (!emailValue.endsWith('@gmail.com')) {
+    alert('Email must end with @gmail.com');
+    return;
+  }
+  
+  if (passwordValue.length < 6 || passwordValue.length > 12) {
+    alert('Password must be between 6 and 12 characters');
+    return;
+  }
+  
+  if (phoneValue.length !== 13) {
+    alert('Phone number must be 13 digits long');
+    return;
+  }
+  
+  // Submit the form if all validation checks pass
+  alert('Form submitted successfully');
+  form.submit();
+});
+
+  </script>
+ </body>
+ </html>

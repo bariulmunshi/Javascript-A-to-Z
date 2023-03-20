@@ -1,0 +1,79 @@
+<!-- utilize the javascript code to add behavior to the following page for finding palindromes. a palindrome is word that spelled the same forward as backword, such as "madam" or "anna".  The page ui allows the user to type a phrase into a text box. The user can click a "find palindrome " button to find palindrome words in that phrase. Match case intensively (hint : use html, css and js) -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Palindrome Finder</title>
+    <style>
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+input[type="text"] {
+  width: 80%;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+button[type="button"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button[type="button"]:hover {
+  background-color: #3e8e41;
+}
+
+#result {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+    </style>
+  </head>
+  <body>
+    <h1>Palindrome Finder</h1>
+    <input type="text" id="phrase" placeholder="Enter a phrase...">
+    <button type="button" id="findButton">Find Palindromes</button>
+    <p id="result"></p>
+    <script>
+      const phraseInput = document.getElementById('phrase');
+const findButton = document.getElementById('findButton');
+const result = document.getElementById('result');
+
+function isPalindrome(str) {
+  // Convert the string to lowercase and remove non-alphanumeric characters
+  const cleanStr = str.toLowerCase().replace(/[^a-z0-9]+/g, '');
+
+  // Check if the string is the same forwards and backwards
+  return cleanStr === cleanStr.split('').reverse().join('');
+}
+
+findButton.addEventListener('click', function() {
+  const phrase = phraseInput.value.trim();
+
+  // Split the phrase into words and check each one for palindromes
+  const words = phrase.split(' ');
+  const palindromes = words.filter(word => isPalindrome(word));
+
+  // Display the palindromes in the result paragraph
+  result.textContent = `Palindromes found: ${palindromes.join(', ')}`;
+});
+
+    </script>
+  </body>
+</html>

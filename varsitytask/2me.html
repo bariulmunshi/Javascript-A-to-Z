@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>simple calculation</title>
+</head>
+<body>
+    <table>
+      <tr>
+        <td>First Number:</td>
+        <td>
+          <input type="number" name="" id="firstNumber">
+        </td>
+      </tr>
+      <tr>
+        <td>Second Number</td>
+        <td>
+          <input type="number" name="" id="lastNumber">
+        </td>
+      </tr>
+      <tr>
+        <td>Result</td>
+        <td>
+          <input type="number" name="" id="result">
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          <input type="submit" value="+" id="plus">
+        </td>
+      </tr>
+    </table>
+    <script>
+      document.getElementById('plus').addEventListener('click',function(){
+        var fnum =Number(document.getElementById('firstNumber').value);
+       var snum =Number(document.getElementById('lastNumber').value);
+       var result= fnum+snum; 
+      document.getElementById('result').value=result;
+      })
+    </script>
+</body>
+</html>

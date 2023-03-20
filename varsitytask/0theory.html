@@ -1,0 +1,33 @@
+<!-- suppose you are working as a system designer in a software company. You got a project for an online banking system that has two major requirement (1)when user select view balance they must be able to look at their latest account balance. (2)Every page of the system should be to the user within 5 second. Identify the functional and non-functional difference between two requirement. Explain the key difference between function and non-functional requirements? -->
+The two major requirements of the online banking system can be classified as follows:
+
+Functional requirement: When user selects "View balance", they must be able to look at their latest account balance.
+
+Non-functional requirement: Every page of the system should be loaded to the user within 5 seconds.
+
+The key difference between functional and non-functional requirements is as follows:
+
+Functional requirements describe what the system must do or what features it must have to meet the user's needs. They are directly related to the system's functionality or behavior, and can often be tested through user acceptance testing.
+Non-functional requirements describe how the system must perform in terms of performance, scalability, security, usability, and other quality attributes. They are not directly related to the system's behavior, but rather to the quality of the system's performance. Non-functional requirements are often harder to test and verify, and may require specialized tools or techniques.
+In the case of the online banking system, the functional requirement is related to the system's behavior, as it describes the specific action the system must perform when the user selects "View balance". The non-functional requirement, on the other hand, is related to the quality of the system's performance, as it specifies the maximum response time for loading a page.
+
+The functional requirement can be tested by verifying that the system correctly displays the user's latest account balance when the "View balance" option is selected. The non-functional requirement, however, requires testing the system's performance to ensure that every page is loaded within 5 seconds. This may involve measuring the system's response time, identifying bottlenecks or performance issues, and optimizing the system to meet the performance requirement.
+
+Overall, functional requirements focus on what the system should do, while non-functional requirements focus on how the system should perform. Both types of requirements are important for building a high-quality system that meets the user's needs and expectations.
+
+<!-- suppose you have requested for a web page to the server where there are 5 videos, 5 HTML files and 5 png images. which step you followed to get that web page by using HTTP persistent connection to you from the web server? -->
+1.The client (i.e., the web browser) initiates a TCP connection to the server.
+
+2.The client sends an HTTP request to the server for the web page. This request includes a header indicating that the client wants to use a persistent connection.
+
+3.The server receives the request and sends back an HTTP response with the requested web page, including the 5 videos, 5 HTML files, and 5 PNG images. The response also includes a header indicating that the server agrees to use a persistent connection.
+
+4.The client receives the response and processes the web page, displaying it to the user.
+
+5.If the user requests additional resources from the same server (e.g., by clicking a link to another page on the same site), the client reuses the same TCP connection to send another HTTP request to the server.
+
+6.The server receives the request, processes it, and sends back the requested resources using the same TCP connection.
+
+7.Steps 5 and 6 can be repeated as many times as needed until the client is done making requests to the server or the connection is closed by either the client or the server.
+
+Using a persistent connection can improve performance by reducing the overhead of establishing and tearing down a new TCP connection for each request. It also allows multiple requests to be sent over the same connection, potentially reducing the total number of connections needed.
