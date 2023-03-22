@@ -1,9 +1,304 @@
-<!-- Common ES6 interview questions -->
-1. What is ES6? Have you ever used anything from ES6?
-2. Explain the difference between var, let and const.
-3. What is the arrow function, and how to create it?
-4. Give an example of an Arrow function in ES6? List down its advantages.
-5. Discuss spread operator in ES6 with an example.
-6. What do you understand about default parameters?
-7. What are template literals in ES6?
-8. Tell us the difference between arrow and regular function.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>EC6-IQ</title>
+  <style>
+    body{
+      width: 600px;
+      margin: auto;
+    }
+    table,td{
+      border: 2px solid gray;
+      border-collapse: collapse;
+      text-align: center;
+      padding: 12px;
+    }
+    .var-li{
+      padding: 10px;
+      margin: 10px;
+      border: 1px solid gray;
+      font-weight: 500;
+      background-color: rgb(201, 202, 202);
+    }
+    .code{
+      background-color: #0d1117;
+      color: #c3cbd4;
+      padding: 10px;
+      /* width: 600px; */
+      margin: auto;
+      /* text-align: center; */
+    }
+    .span-tag{
+      color: blue;
+    }
+  </style>
+</head>
+<body>
+  <!-- Common ES6 interview questions -->
+<h1>1. What is ES6? <br></h1>
+<p>
+  ES6, or ECMAScript 2015, is a version of the JavaScript programming language that was released in 2015. It is a major update to the language, introducing many new features and syntax improvements.  <br>
+
+  Some of the key features introduced in ES6 include: <br>
+  <ol>
+    <li class="var-li">Arrow functions: a new, more concise syntax for defining functions.</li>
+    <li class="var-li">Let and const: two new keywords for defining variables with block scope.</li>
+    <li class="var-li">Template literals: a new way to define strings with embedded expressions.</li>
+    <li class="var-li">Destructuring: a new syntax for extracting values from objects and arrays.</li>
+    <li class="var-li">Classes: a new syntax for defining classes and inheritance.</li>
+    <li class="var-li"> Promises: a new way to handle asynchronous operations.</li>
+    <li class="var-li">Default parameters: a new syntax for defining default parameter values for functions.</li>
+    <li>Spread operator: a new syntax for expanding arrays and objects.</li>
+  </ol>
+  ES6 also includes many other smaller improvements and additions to the language. It has since been followed by several other updates, including ES7 (2016), ES8 (2017), and so on, with each new version adding new features and improvements to the language.
+</p>
+<h2>Have you ever used anything from ES6?</h2>
+<p><span class="span-tag">Sample Answer:</span> <br>
+  If you have used ES6, you could provide specific examples of features you have used, such as arrow functions, template literals, or destructuring. You could also explain how these features helped you to write more efficient or readable code. Additionally, you could mention any challenges you faced when working with ES6 and how you overcame them.
+ <br>
+On the other hand, if you have not used ES6, you could be honest and explain that you have not yet had the opportunity to work with it, but you are eager to learn and are familiar with its features and benefits. You could also mention any related experience you have, such as working with other versions of ECMAScript or other programming languages with similar features.
+</p>
+<h1>2. Explain the difference between var, let and const.</h1>
+<table>
+  <tr>
+    <td>Feature</td>
+    <td>var</td>
+    <td>	let</td>
+    <td>const</td>
+  </tr>
+  <tr>
+    <td>Scope</td>
+    <td>Function-scoped</td>
+    <td>Block-scoped</td>
+    <td>Block-scoped</td>
+  </tr>
+  <tr>
+    <td>Hoisting</td>
+    <td>Hoisted to top of function</td>
+    <td>Not hoisted</td>
+    <td>Not hoisted</td>
+  </tr>
+  <tr>
+    <td>Reassignment	</td>
+    <td>Can be reassigned</td>
+    <td>Can be reassigned</td>
+    <td>	Cannot be reassigned</td>
+  </tr>
+  <tr>
+    <td>Initialization</td>
+    <td>Can be declared without initialization</td>
+    <td>Must be initialized before use</td>
+    <td>Must be initialized before use</td>
+  </tr>
+</table>
+<p>Here's a brief explanation of each feature:</p>
+<ul>
+    <li class="var-li">Scope: var variables are function-scoped, meaning they are accessible throughout the entire function in which they are declared. let and const variables, on the other hand, are block-scoped, meaning they are only accessible within the block in which they are declared (e.g. within a loop or an if statement).</li>
+    <li class="var-li">Hoisting: var variables are hoisted to the top of the function, which means they can be used before they are declared. let and const variables are not hoisted, which means they must be declared before they are used.</li>
+    <li class="var-li">Reassignment: var and let variables can be reassigned a new value at any time. const variables, however, cannot be reassigned once they are initialized.</li>
+    <li class="var-li">Initialization: var variables can be declared without being initialized with a value, and they will have a default value of undefined. let and const variables, however, must be initialized with a value before they are used.</li>
+</ul>
+<h1>3. What is the arrow function, and how to create it?</h1>
+<p>An arrow function is a new syntax for defining functions in JavaScript, introduced in ES6. It is a more concise way to write functions and has a few differences compared to traditional function syntax.</p>
+<p>Here's an example of how to create an arrow function:</p>
+<p class="code">
+  // Traditional function syntax 
+  <br>
+  function add(a, b) { <br>
+    return a + b; <br>
+  } <br>
+  // Arrow function syntax
+  <br>
+  const add = (a, b) => { <br>
+    return a + b; <br>
+  }; <br>
+  // Arrow function syntax (shorter version with implicit return)
+  const add = (a, b) => a + b;   <br>
+</p>
+<p>As you can see, the arrow function syntax is shorter and more concise than the traditional function syntax. It uses an arrow (=>) instead of the function keyword to indicate that it's a function.</p>
+<p>Arrow functions have a few differences compared to traditional functions:</p>
+<ul>
+  <li class="var-li">Arrow functions are always anonymous, meaning they don't have a name. They are typically assigned to a variable instead.</li>
+  <li class="var-li">Arrow functions have a concise syntax for single-line functions, where you can omit the curly braces and the return keyword. This is called an "implicit return".</li>
+  <li class="var-li">Arrow functions have a lexically-bound this keyword, meaning it inherits the value of this from its surrounding context (i.e. where it was defined) rather than creating its own this value.</li>
+</ul>
+<h1>4. Give an example of an Arrow function in ES6? List down its advantages.</h1>
+<p>Here's an example of an arrow function in ES6:</p>
+<p class="code">
+  // Traditional function syntax 
+  <br>
+function multiply(a, b) { <br>
+  return a * b; <br>
+} <br>
+// Arrow function syntax
+<br>
+const multiply = (a, b) => a * b; <br>
+</p>
+<p>This arrow function takes two arguments, a and b, and returns their product. The => syntax is used to indicate that this is an arrow function.</p>
+<p>Now, let's talk about some advantages of arrow functions:</p>
+<ol>
+  <li class="var-li">Concise syntax: Arrow functions have a more concise syntax compared to traditional functions, especially for simple one-liner functions. This makes the code easier to read and write.</li>
+  <li class="var-li">Lexical this: Arrow functions have a lexical this context, which means they inherit this from their surrounding context rather than creating a new this. This can make it easier to write and understand code, especially in situations where this can be confusing.</li>
+  <li class="var-li">Implicit return: Arrow functions have an implicit return for one-liner functions. This means that you can omit the return keyword and just write the expression to be returned. This can make the code even more concise.</li>
+  <li class="var-li">No binding of this: Arrow functions do not have their own this, so you don't need to bind this in event listeners and callback functions. This can make the code simpler and more efficient.</li>
+  <li class="var-li">Useful with array methods: Arrow functions are commonly used with array methods like map, filter, and reduce. This can make the code more expressive and easier to read.</li>
+</ol>
+<h1>5. Discuss spread operator in ES6 with an example.</h1>
+<p>The spread operator is a new feature in ES6 that allows you to "spread" an array or object into multiple elements. It's denoted by three dots (...) before the array or object. Here's an example:</p>
+<p class="code">
+  const numbers = [1, 2, 3];  <br>
+  console.log(...numbers); // Output: 1 2 3
+  </p>
+  <p>In this example, we have an array of numbers [1, 2, 3]. We can use the spread operator (...) to "spread" the values of the array into separate arguments to the console.log() function. This will output 1 2 3 to the console.</p>
+  <p>The spread operator is also useful for combining arrays or objects. Here's an example:</p>
+  <p class="code">
+    const numbers1 = [1, 2, 3]; <br>
+const numbers2 = [4, 5, 6]; <br>
+const combined = [...numbers1, ...numbers2]; <br>
+console.log(combined); // Output: [1, 2, 3, 4, 5, 6]
+  </p>
+  <p>
+    In this example, we have two arrays of numbers, numbers1 and numbers2. We can use the spread operator (...) to combine these arrays into a single array, combined. This will output [1, 2, 3, 4, 5, 6] to the console.
+<br>  <br>
+The spread operator can also be used with objects. Here's an example:
+  </p>
+  <p class="code"> 
+    const obj1 = { foo: 1, bar: 2 }; <br>
+const obj2 = { baz: 3, qux: 4 }; <br>
+const combined = { ...obj1, ...obj2 }; <br>
+console.log(combined); // Output: { foo: 1, bar: 2, baz: 3, qux: 4 }
+  </p>
+  <p>In this example, we have two objects, obj1 and obj2. We can use the spread operator (...) to combine these objects into a single object, combined. This will output { foo: 1, bar: 2, baz: 3, qux: 4 } to the console.</p>
+  <p>
+    Overall, the spread operator is a useful feature in ES6 that can make your code more concise and expressive. It's particularly useful for combining arrays or objects, and for "spreading" the values of an array or object into separate arguments.
+  </p>
+<h1>6. What do you understand about default parameters?</h1>
+<p>
+  In ES6, default parameters allow you to set default values for function parameters in case they are not provided when the function is called. This can help make the function more flexible and easier to use, as you don't have to manually check whether each parameter was provided and set a default value if it wasn't.
+</p>
+<p>Here's an example of a function with default parameters:</p>
+<p class="code">
+  function greet(name = 'World', greeting = 'Hello') { <br>
+    console.log(`${greeting}, ${name}!`); <br>
+  } <br>
+  greet(); // Output: Hello, World! <br>
+  greet('Alice'); // Output: Hello, Alice! <br>
+  greet('Bob', 'Hi'); // Output: Hi, Bob!  
+</p>
+<p>
+  In this example, we have a function greet that takes two parameters, name and greeting. We've set default values for each parameter using the = operator: 'World' for name and 'Hello' for greeting. This means that if these parameters are not provided when the function is called, the default values will be used instead.
+<br> <br>
+We can call the greet function with no arguments, with just a name argument, or with both a name and greeting argument. In each case, the function will use the provided values if they exist, or the default values if they don't.
+<br> <br>
+Overall, default parameters are a useful feature in ES6 that can help simplify your code and make your functions more flexible and easier to use.
+</p>
+<h1>7. What are template literals in ES6?</h1>
+<p>In ES6, template literals are a new way to create strings that allows you to include dynamic expressions and multiline text in a more concise and readable way.</p>
+<p>Template literals are denoted by backticks ( ) instead of single quotes or double quotes. They allow you to embed expressions using the ${} syntax, which is evaluated at runtime and inserted into the string.</p>
+<p>Here's an example of a simple template literal:</p>
+<p class="code">
+  const name = 'Alice'; <br>
+console.log(`Hello, ${name}!`);
+</p>
+<p>
+  In this example, we're using a template literal to create a string that includes the variable name using the ${} syntax. When the code is executed, the string "Hello, Alice!" will be output to the console.
+<br> <br>
+Template literals are also useful for multiline text. In a template literal, you can include newlines and indentation, and the resulting string will preserve the formatting.
+<br> <br>
+Here's an example of a multiline template literal:
+</p>
+<p class="code"> 
+  const message = ` <br>
+  Dear Alice,
+<br> <br>
+  Thank you for your email. I'm glad to hear that you're doing well.
+<br> <br>
+  Best regards, <br>
+  Bob <br>
+`;
+<br> <br>
+console.log(message);
+</p>
+<p>
+  In this example, we're using a template literal to create a multiline string that includes newlines and indentation. When the code is executed, the string will be output to the console with the formatting preserved.
+<br> <br>
+Overall, template literals are a useful feature in ES6 that make it easier to create dynamic and multiline strings in a more concise and readable way.
+</p>
+<h1>8. Tell us the difference between arrow and regular function.</h1>
+<p>In JavaScript, an arrow function is a concise way to define a function using the "=>" arrow syntax. Here are some of the differences between arrow functions and regular functions:</p>
+<p>
+ <span class="span-tag"> 1.Syntax:</span>  <br>
+ Arrow functions have a shorter and more concise syntax than regular functions. They don't have the "function" keyword, and the arrow syntax replaces the return statement.
+</p>
+<p>Example of a regular function:</p>
+<p class="code">
+  function add(a, b) { <br>
+    return a + b; <br>
+  }
+</p>
+<p>
+  Example of an arrow function:
+</p>
+<p class="code">
+  const add = (a, b) => a + b;
+</p>
+<p>
+ <span class="span-tag">2. Binding of "this":</span> <br>
+  The value of "this" inside an arrow function is always the same as the value of "this" in the outer lexical scope. In regular functions, the value of "this" can change depending on how the function is called.
+  <br> <br>
+Example of a regular function where the value of "this" changes:
+</p>
+<p class="code">
+  const person = { <br>
+    name: 'John', <br>
+    greet: function() { <br>
+      console.log(`Hello, my name is ${this.name}.`); <br>
+    } <br>
+  }; <br>
+  <br> <br>
+  const greet = person.greet; <br>
+  greet(); // "Hello, my name is undefined."
+
+</p>
+<p>Example of an arrow function where the value of "this" is the same as in the outer scope:</p>
+<p class="code">
+  const person = { <br>
+    name: 'John', <br>
+    greet: function() { <br>
+      const sayHello = () => { <br>
+        console.log(`Hello, my name is ${this.name}.`); <br>
+      }; <br>
+      sayHello(); <br>
+    } <br>
+  }; <br>
+  <br> <br>
+  person.greet(); // "Hello, my name is John." 
+</p>
+<p>
+  <span class="span-tag">3.Use of arguments object:</span>
+  Arrow functions don't have access to the "arguments" object, whereas regular functions do. <br>
+  Example of a regular function using the arguments object:</p>
+  <p class="code">
+    function sum() { <br>
+      let total = 0; <br>
+      for (let i = 0; i < arguments.length; i++) { <br>
+        total += arguments[i]; <br>
+      } <br>
+      return total;<br>
+    }
+  </p>
+  <p>Example of an arrow function without access to the arguments object:</p>
+  <p class="code">
+    const sum = (...args) => { <br>
+      let total = 0; <br>
+      for (let i = 0; i < args.length; i++) { <br>
+        total += args[i]; <br>
+      } <br>
+      return total; <br>
+    };
+  </p>  
+  <p style="margin-bottom: 40px;">
+    In summary, arrow functions are a shorthand way to write functions in JavaScript. They have a shorter syntax, a fixed "this" binding, and don't have access to the "arguments" object.
+  </p>
+</body>
+</html>
