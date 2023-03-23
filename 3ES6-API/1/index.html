@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width= , initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <section>
+    <div class="friend">
+      <h3 class="friend-name">friend-1</h3>
+      <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+    <div class="friend">
+      <h3 class="friend-name">friend-2</h3>
+      <p>Numquam facilis harum fuga obcaecati.</p>
+    </div>
+    <div class="friend">
+      <h3 class="friend-name">friend-3</h3>
+      <p>Ad reprehenderit eaque sed! Quisquam.</p>
+    </div>
+    <div class="friend">
+      <h3 class="friend-name">friend-4</h3>
+      <p>Accusantium distinctio quas accusamus velit.</p>
+    </div>
+    <div class="friend">
+      <h3 class="friend-name">friend-5</h3>
+      <p>Libero sint laudantium officiis doloremque.</p>
+    </div>
+    <div class="operations">
+      <button id="apply-bg">Apply Background</button>
+      <button  id="center-third">center the third</button>
+    </div>
+  </section>
+  <script>
+    document.getElementById('apply-bg').addEventListener('click',function(){
+      const friends=document.getElementById('friend');
+      for(const friend of friends){
+        friend.style.backgroundColor='lightblue';
+      }
+    });
+    document.getElementById('center-third').addEventListener('click',function(){
+      
+    })
+  </script>
+</body>
+</html>
