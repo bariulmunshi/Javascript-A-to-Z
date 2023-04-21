@@ -15,6 +15,7 @@ class Instructor{
     console.log(`Please create quiz for module ${module}`)
   }
 }
+//create instance from instructor class 
 const  amir=new Instructor(); //get object without constructor from class & required new keyword
 console.log(amir);
 const  aamir=new Instructor('aamir','mumbai'); //get object form class & required new keyword

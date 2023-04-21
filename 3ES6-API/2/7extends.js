@@ -24,19 +24,14 @@ class Instructor extends TeamMember{
   createQuiz(module){ //method or function in class
     console.log(`Please create quiz for module ${module}`)
   }
-  provideFeedback(){
-    console.log(`${this.name} thank you for your feedback.`)
-  }
 }
 
 class Developer extends TeamMember{
-  name; //dynamic properties different from every object
   designation='web course instructor'
   team='team web'
-  location; //dynamic properties different from every object
+  tech;
   constructor(name,location,tech){
-    this.name=name;
-    this.location=location; 
+    super(name,location);
     this.tech=tech;
   }
   developFeature(feature){ // method or function in class
@@ -45,20 +40,15 @@ class Developer extends TeamMember{
   release(version){ //method or function in class
     console.log(`Please release the version${version}`)
   }
-  provideFeedback(){
-    console.log(`${this.name} thank you for your feedback.`)
-  }
 }
 
-class JobPlacement{
-  name; //dynamic properties different from every object
+class JobPlacement extends TeamMember{
   designation='Job Placement commandos'
   team='Job Placement team'
-  location; //dynamic properties different from every object
-  constructor(name,location,tech){
-    this.name=name;
-    this.location=location; 
-    this.tech=tech;
+  region;
+  constructor(name,location,region){
+    super(name,location)
+    this.region=region;
   }
   provideResume(feature){ // method or function in class
     console.log(`Please develop the feature ${feature}`) 
@@ -66,7 +56,8 @@ class JobPlacement{
   prepareStudents(version){ //method or function in class
     console.log(`Please release the version${version}`)
   }
-  provideFeedback(){
-    console.log(`${this.name} thank you for your feedback.`)
-  }
 }
+const alia= new Developer('Alia vatt','Dhaka','React');
+// console.log(alia);
+const bipasha=new JobPlacement('Bepasha','Kolkata','India');
+console.log(bipasha);
