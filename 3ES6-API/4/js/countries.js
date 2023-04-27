@@ -17,17 +17,26 @@ const displayCountries = countries => {
     countryDiv.innerHTML = `
     <h3>Name:${country.name.common} </h3>
     <p>Capital:${country.capital ? country.capital[0] : 'No Capital'}</P>
-    <button onclick="displayCountryDetails()">Details</button>
+    <button onclick="loadCountryDetails()">Details</button>
     `;
     countriesContainer.appendChild(countryDiv);
   })
 }
-const displayCountryDetails = code => {
+/* Call dynamic API, load dynamic data to display */
+const loadCountryDetails = code => {
   //https://restcountries.com/v3.1/alpha/{code}
-  const url =`
-https://restcountries.com/v3.1/alpha/${code}
-  
-  `
-  console.console.log(url);
+  const url =`https://restcountries.com/v3.1/alpha/${code}`
+  //console.log(url);
+  fetch (url)
+  .then(res=>res.json())
+  .then(data=>showCountryDetail(data[0]));
+}
+const showCountryDetail= country=>{
+    console.log(country)
+    const detailContainer= document.getElementById('country-detail')
+    detailContainer.innerHTML=`
+    <h3> Name:${country.name.common}</h3>
+    <img src="${country.flags.png}">
+    `
 }
 loadCountries();

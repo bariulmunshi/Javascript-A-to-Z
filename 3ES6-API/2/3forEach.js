@@ -1,3 +1,4 @@
+/* foreach */
 const friends=['Tom hanks','Tom curise', 'Tom Brady', 'Tom Sulaiman'];    
 // friends.forEach(friend=>console.log(friend));
 const products=[
