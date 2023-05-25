@@ -17,5 +17,12 @@ const lendMoney=()=>{
 const getInfo=()=>{
   //alert
   //confirm
-  prompt('Tell me your name')
+  const name=prompt('Tell me your name');
+  console.log(name);
+  if(name===null){
+    alert('name na dile kam nai')
+  }
+  else{
+    console.log(name,'Welcome this world');
+  }
 }
