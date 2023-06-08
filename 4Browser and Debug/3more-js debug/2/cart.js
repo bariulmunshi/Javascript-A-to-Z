@@ -13,10 +13,11 @@ const addProduct=()=>{
 const displayProduct=(product,quantity)=>{
   const ul=document.getElementById('product-container');
   const li=document.createElement('li');
-  li.innerText=`${product}:${quantity}`
+  li.innerText=`${product}: ${quantity}`;
   ul.appendChild(li);
 }
 
+//store data
 const getStoreShoppingCart=()=>{
   let cart={};
   const storedCart=localStorage.getItem('cart');
@@ -25,6 +26,8 @@ const getStoreShoppingCart=()=>{
   }
   return cart;
 }
+
+//save data
 const saveProductToLocalStorage=(product,quantity)=>{
   const cart=getStoreShoppingCart(); 
   cart[product]=quantity;
@@ -38,6 +41,7 @@ const displayProductsFromLocalStorage=()=>{
   for(const product in savedCart){
     const quantity=savedCart[product];
     console.log(product,quantity);
+    displayProduct(product,quantity);
   }
 }
 displayProductsFromLocalStorage();
